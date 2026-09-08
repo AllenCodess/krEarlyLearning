@@ -1,0 +1,31 @@
+/* Global Settings */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.4rem 0;
+}
+
+/* Navigation Bar */
+
+.kr-logo {
+  width: 100px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
