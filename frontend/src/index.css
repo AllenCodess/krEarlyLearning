@@ -54,3 +54,40 @@
   color: rgb(0, 63, 0);
   text-decoration: none;
 }
+
+.hamburger-menu {
+  display: none;
+}
+
+/* Mobile Response */
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+
+  .navbar-list {
+    display: none;
+  }
+
+  .navbar-list.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 120px;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 1.5rem 0;
+    border-bottom: 2px solid grey;
+    background-color: white;
+  }
+
+  .navbar-list-items {
+    padding: 0.4rem 0;
+  }
+
+  .navbar-container {
+    margin: 0 0.4rem;
+  }
+}
