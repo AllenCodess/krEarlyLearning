@@ -27,10 +27,30 @@
 .navbar-list {
   display: flex;
   list-style: none;
+
   gap: 20px;
 }
 
 .navbar-list-items {
   font-family: "Fira Sans", sans-serif;
   font-size: larger;
+}
+
+.nav-links {
+  text-decoration: none;
+  color: rgb(90, 90, 90);
+}
+
+.nav-links:hover {
+  background-color: rgb(209, 209, 209);
+  padding: 8px;
+  border-radius: 7px;
+}
+
+.active-link {
+  background-color: rgb(185, 231, 185);
+  border-radius: 7px;
+  padding: 8px;
+  color: rgb(0, 63, 0);
+  text-decoration: none;
 }

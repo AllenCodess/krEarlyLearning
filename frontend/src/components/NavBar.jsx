@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 
 export const NavBar = () => {
   return (
@@ -10,20 +10,41 @@ export const NavBar = () => {
         <div className="navbar-right">
           <ul className="navbar-list">
             <li className="navbar-list-items">
-              <Link to={"/"}>Home</Link>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active-link" : "nav-links")}
+                to={"/"}
+              >
+                Home
+              </NavLink>
             </li>
             <li className="navbar-list-items">
-              {" "}
-              <Link to={"/about"}>About Us</Link>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active-link" : "nav-links")}
+                to={"/about"}
+              >
+                About Us
+              </NavLink>
             </li>
             <li className="navbar-list-items">
-              <Link to={"/programs"}>Programs</Link>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active-link" : "nav-links")}
+                to={"/programs"}
+              >
+                Programs
+              </NavLink>
             </li>
             <li className="navbar-list-items">
-              <Link to={"/tuitionandenrollment"}>Tuition & Enrollment</Link>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active-link" : "nav-links")}
+                to={"/tuitionandenrollment"}
+              >
+                Tuition & Enrollment
+              </NavLink>
             </li>
             <li className="navbar-list-items">
-              <Link to={"/"}>Parent Portal</Link>
+              <Link className="nav-links" to={"/"}>
+                Parent Portal
+              </Link>
             </li>
           </ul>
         </div>
