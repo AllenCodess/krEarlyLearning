@@ -355,4 +355,44 @@
   .why-choose-description {
     width: 80%;
   }
+
+  .footer-container {
+    flex-direction: column;
+  }
+  .solid-line {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .footerone {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hero-list {
+    width: 90%;
+    margin: 1rem auto;
+    justify-content: center;
+  }
+  .footertwo {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .footerthree {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .footer-location {
+    margin: 0 auto;
+  }
+  .footerfour {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .footer-socials-list {
+    justify-content: center;
+  }
 }
