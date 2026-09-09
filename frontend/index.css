@@ -64,7 +64,13 @@
 .hero-section {
   display: flex;
   background-image:
-    linear-gradient(to left, transparent 20%, rgba(255, 255, 255, 0.568), rgb(255, 255, 255)),
+    linear-gradient(
+      to left,
+      transparent 20%,
+      rgba(255, 255, 255, 0.103),
+      rgba(255, 255, 255, 0.473),
+      rgb(255, 255, 255)
+    ),
     url("/public/images/heroimg.png");
   background-size: cover;
   height: 600px;
@@ -126,6 +132,60 @@
   color: rgb(0, 63, 0);
 }
 
+/* Why Choose Section */
+.why-choose-us-section {
+  background-color: rgb(237, 247, 237);
+}
+
+.why-choose-text-container {
+  text-align: center;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.why-choose-sub-header {
+  margin-bottom: 1rem;
+}
+
+.why-choose-main-header {
+  font-size: 30px;
+}
+
+.why-choose-description {
+  color: rgb(90, 90, 90);
+  width: 50%;
+  margin: 1rem auto;
+}
+
+.grey {
+  color: rgb(90, 90, 90);
+}
+
+.why-choose-grid-item {
+  background-color: white;
+  border-radius: 8px;
+}
+
+.fonticonwhy {
+  margin: 1rem;
+  font-size: 24px;
+  background-color: rgb(226, 245, 226);
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.why-choose-grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  width: 90%;
+  margin: 0 auto;
+  gap: 15px;
+}
+
+.item-desc {
+  margin: 1rem;
+  font-size: 14px;
+  line-height: 25px;
+}
 /* Mobile Response */
 
 @media (max-width: 768px) {
