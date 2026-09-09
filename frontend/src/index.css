@@ -59,6 +59,52 @@
   display: none;
 }
 
+/* Hero Section */
+
+.hero-section {
+  display: flex;
+}
+
+.hero-img {
+  mask-image: linear-gradient(to right, transparent 0%, black 40%);
+  width: 100%;
+}
+
+.hero-img-container {
+  flex: 1;
+}
+
+.hero-section-text-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  font-family: "Fira Sans", sans-serif;
+  width: 50%;
+}
+
+.hero-header {
+  font-size: 60px;
+  width: 75%;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  width: 63%;
+  line-height: 25px;
+}
+
+.hero-btn {
+  margin-top: 2rem;
+  width: 30%;
+  border-radius: 16px;
+  border: none;
+  padding: 10px;
+  font-family: "Fira Sans", sans-serif;
+  background-color: rgb(255, 116, 139);
+  color: white;
+}
+
 /* Mobile Response */
 
 @media (max-width: 768px) {
