@@ -114,6 +114,26 @@ export const HomePage = () => {
               </p>
             </div>
           </div>
+          <div className="last-why-container">
+            <div className="divide-heart-container">
+              <FontAwesomeIcon className="pink lastwhyicon" icon={faHeart} />
+            </div>
+            <ul className="last-why-list">
+              <li className="last-why-list-item">PLAY</li>
+              <li className="last-why-list-item">
+                <FontAwesomeIcon className="pink small" icon={faHeart} />
+              </li>
+              <li className="last-why-list-item">LEARN</li>
+              <li className="last-why-list-item">
+                <FontAwesomeIcon className="pink small" icon={faHeart} />
+              </li>
+              <li className="last-why-list-item">GROW</li>
+              <li className="last-why-list-item">
+                <FontAwesomeIcon className="pink small" icon={faHeart} />
+              </li>
+              <li className="last-why-list-item">BELONG</li>
+            </ul>
+          </div>
         </div>
       </div>
     </>

@@ -186,6 +186,50 @@
   font-size: 14px;
   line-height: 25px;
 }
+
+.divide-heart-container::before {
+  content: "";
+  display: inline-block;
+  width: 7%;
+  height: 1px;
+  background-color: rgb(255, 134, 154);
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.divide-heart-container::after {
+  content: "";
+  display: inline-block;
+  width: 7%;
+  height: 1px;
+  background-color: rgb(255, 134, 154);
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.lastwhyicon {
+  padding: 0 3px;
+}
+
+.divide-heart-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.last-why-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.last-why-list-item {
+  padding: 0 0.4rem;
+}
+
+.small {
+  font-size: 10px;
+}
 /* Mobile Response */
 
 @media (max-width: 768px) {
