@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShield } from "@fortawesome/free-solid-svg-icons";
+
 export const HomePage = () => {
   return (
     <>
@@ -9,6 +12,7 @@ export const HomePage = () => {
             grow, and thrive.
           </p>
           <button className="hero-btn">Schedule A tour</button>
+          <FontAwesomeIcon icon={faShield} />
         </div>
         <div className="hero-img-container">
           <img className="hero-img" src="/frontend/public/images/heroimg.png" alt="" />
