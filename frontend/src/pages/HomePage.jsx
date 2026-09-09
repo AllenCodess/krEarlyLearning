@@ -1,3 +1,4 @@
+import { Footer } from "../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHeart,
@@ -136,6 +137,7 @@ export const HomePage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
