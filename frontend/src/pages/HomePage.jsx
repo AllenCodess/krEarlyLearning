@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShield } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export const HomePage = () => {
   return (
@@ -11,11 +11,20 @@ export const HomePage = () => {
             A safe, nuturing, and enriching home-based learning environment where childeren learn,
             grow, and thrive.
           </p>
-          <button className="hero-btn">Schedule A tour</button>
-          <FontAwesomeIcon icon={faShield} />
-        </div>
-        <div className="hero-img-container">
-          <img className="hero-img" src="/frontend/public/images/heroimg.png" alt="" />
+          <button className="hero-btn">
+            Schedule a Tour <FontAwesomeIcon className="hero-arrow" icon={faArrowRight} />
+          </button>
+          <ul className="hero-list">
+            <li className="hero-list-item">LEARN</li>
+            <li className="hero-list-item pink">
+              <FontAwesomeIcon icon={faHeart} />
+            </li>
+            <li className="hero-list-item">LEARN</li>
+            <li className="hero-list-item pink">
+              <FontAwesomeIcon icon={faHeart} />
+            </li>
+            <li className="hero-list-item">LEARN</li>
+          </ul>
         </div>
       </div>
     </>

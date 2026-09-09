@@ -8,7 +8,7 @@ export const NavBar = () => {
     <>
       <div className="navbar-container container">
         <div className="navbar-left">
-          <img src="/frontend/public/images/krlogo.png" className="kr-logo" alt="kr logo" />
+          <img src="/public/images/krlogo.png" className="kr-logo" alt="kr logo" />
         </div>
         <div className="navbar-right">
           <div className="hamburger-menu">

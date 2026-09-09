@@ -1,9 +1,9 @@
-import { NavBar } from "./components/NavBar";
+import { NavBar } from "./src/components/NavBar";
 import { Route, Routes } from "react-router";
-import { HomePage } from "./pages/HomePage";
-import { AboutPage } from "./pages/AboutPage";
-import { ProgramPage } from "./pages/ProgramsPage";
-import { TuitionandEnrollment } from "./pages/TutionandEnrollmentPage";
+import { HomePage } from "./src/pages/HomePage";
+import { AboutPage } from "./src/pages/AboutPage";
+import { ProgramPage } from "./src/pages/ProgramsPage";
+import { TuitionandEnrollment } from "./src/pages/TutionandEnrollmentPage";
 
 function App() {
   return (
