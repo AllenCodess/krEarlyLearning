@@ -15,13 +15,14 @@
 /* Navigation Bar */
 
 .kr-logo {
-  width: 100px;
+  width: 80px;
 }
 
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 1rem;
 }
 
 .navbar-list {
@@ -48,10 +49,9 @@
 }
 
 .active-link {
-  background-color: rgb(185, 231, 185);
   border-radius: 7px;
   padding: 8px;
-  color: rgb(0, 63, 0);
+  color: rgb(255, 112, 136);
   text-decoration: none;
 }
 
@@ -64,7 +64,7 @@
 .hero-section {
   display: flex;
   background-image:
-    linear-gradient(to left, transparent 0%, rgba(241, 237, 237, 0), rgb(255, 255, 255)),
+    linear-gradient(to left, transparent 20%, rgba(255, 255, 255, 0.568), rgb(255, 255, 255)),
     url("/public/images/heroimg.png");
   background-size: cover;
   height: 600px;
@@ -75,6 +75,8 @@
   flex-direction: column;
   font-family: "Fira Sans", sans-serif;
   width: 50%;
+  margin-top: 2rem;
+  margin-left: 2rem;
 }
 
 .hero-header {
@@ -82,6 +84,7 @@
   width: 75%;
   font-weight: 400;
   margin-bottom: 1rem;
+  font-family: "PT Serif", serif;
 }
 
 .hero-text {
@@ -92,7 +95,7 @@
 .hero-btn {
   margin-top: 2rem;
   width: 40%;
-  border-radius: 16px;
+  border-radius: 20px;
   border: none;
   padding: 10px;
   font-family: "Fira Sans", sans-serif;
@@ -117,6 +120,10 @@
 
 .pink {
   color: rgb(255, 112, 136);
+}
+
+.green {
+  color: rgb(0, 63, 0);
 }
 
 /* Mobile Response */
@@ -149,5 +156,35 @@
 
   .navbar-container {
     margin: 0 0.4rem;
+  }
+  .hero-section-text-container {
+    display: flex;
+    flex-direction: column;
+    font-family: "Fira Sans", sans-serif;
+    width: 90%;
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
+
+  .hero-header {
+    font-size: 30px;
+    width: 100%;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .hero-section {
+    height: 400px;
+  }
+
+  .hero-btn {
+    font-size: 13px;
+    margin-top: 1rem;
+  }
+  .hero-text {
+    font-size: 13px;
+    width: 90%;
+    font-weight: 500;
+    line-height: 16px;
   }
 }

@@ -8,22 +8,22 @@ export const HomePage = () => {
         <div className="hero-section-text-container">
           <h1 className="hero-header">Building Bright Minds & Strong Futures</h1>
           <p className="hero-text">
-            A safe, nuturing, and enriching home-based learning environment where childeren learn,
+            A safe, nuturing, and enriching home-based learning environment where children learn,
             grow, and thrive.
           </p>
           <button className="hero-btn">
             Schedule a Tour <FontAwesomeIcon className="hero-arrow" icon={faArrowRight} />
           </button>
           <ul className="hero-list">
-            <li className="hero-list-item">LEARN</li>
+            <li className="hero-list-item green">LEARN</li>
             <li className="hero-list-item pink">
               <FontAwesomeIcon icon={faHeart} />
             </li>
-            <li className="hero-list-item">LEARN</li>
+            <li className="hero-list-item green">GROW</li>
             <li className="hero-list-item pink">
               <FontAwesomeIcon icon={faHeart} />
             </li>
-            <li className="hero-list-item">LEARN</li>
+            <li className="hero-list-item green">THRIVE</li>
           </ul>
         </div>
       </div>

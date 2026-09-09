@@ -6,7 +6,7 @@ export const NavBar = () => {
   const [isOpen, setOpen] = useState(false);
   return (
     <>
-      <div className="navbar-container container">
+      <div className="navbar-container container ">
         <div className="navbar-left">
           <img src="/public/images/krlogo.png" className="kr-logo" alt="kr logo" />
         </div>
