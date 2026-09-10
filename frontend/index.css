@@ -67,9 +67,9 @@
     linear-gradient(
       to left,
       transparent 20%,
-      rgba(255, 255, 255, 0.103),
-      rgba(255, 255, 255, 0.473),
-      rgb(255, 255, 255)
+      rgba(255, 255, 255, 0.185),
+      rgba(255, 255, 255, 0.24),
+      rgba(255, 255, 255, 0.979)
     ),
     url("/public/images/heroimg.png");
   background-size: cover;
@@ -88,14 +88,27 @@
 .hero-header {
   font-size: 60px;
   width: 75%;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 1rem;
   font-family: "PT Serif", serif;
+  color: rgb(0, 58, 0);
+  text-shadow:
+    1px 1px 2px white,
+    0 0 1em white,
+    0 0 0.2em white;
 }
 
 .hero-text {
   width: 63%;
+  font-weight: 500;
   line-height: 25px;
+}
+
+.hero-subtext {
+  width: 63%;
+  line-height: 25px;
+  font-size: 14px;
+  margin-top: 1rem;
 }
 
 .hero-btn {
@@ -340,12 +353,20 @@
   .hero-btn {
     font-size: 13px;
     margin-top: 1rem;
+    width: 42%;
   }
   .hero-text {
     font-size: 13px;
     width: 90%;
     font-weight: 500;
     line-height: 16px;
+  }
+
+  .hero-subtext {
+    font-size: 12px;
+    width: 80%;
+    line-height: 20px;
+    font-weight: 400;
   }
 
   .why-choose-grid-container {
