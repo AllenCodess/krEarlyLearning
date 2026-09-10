@@ -245,6 +245,51 @@
   font-size: 10px;
 }
 
+/* About Section */
+
+.about-section {
+  display: flex;
+  background-image:
+    linear-gradient(
+      to left,
+      transparent 20%,
+      rgba(255, 255, 255, 0.185),
+      rgba(255, 255, 255, 0.24),
+      rgba(255, 255, 255, 0.979)
+    ),
+    url("/public/images/abouthero.png");
+  background-size: cover;
+  height: 600px;
+}
+
+.our-story-img {
+  width: 40%;
+}
+
+.our-story-flex {
+  display: flex;
+  column-gap: 20px;
+}
+
+.our-story-text-container {
+  font-family: "Fira Sans", sans-serif;
+}
+
+.mainheaderabout {
+  font-size: 40px;
+  width: 60%;
+}
+
+.ourstorydesc {
+  line-height: 25px;
+  width: 70%;
+  margin-top: 1rem;
+}
+
+.abouthr {
+  margin-top: 1rem;
+}
+
 /* Footer */
 .footer-container {
   display: flex;
@@ -415,5 +460,43 @@
 
   .footer-socials-list {
     justify-content: center;
+  }
+
+  .our-story-flex {
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .our-story-img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .our-story-text-container {
+    text-align: center;
+  }
+
+  .mainheaderabout {
+    font-size: 25px;
+    width: 100%;
+  }
+
+  .ourstorydesc {
+    line-height: 25px;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .about-section {
+    height: 400px;
+  }
+
+  .why-choose-main-header {
+    font-size: 25px;
+  }
+
+  .subheaderabout {
+    margin: 1rem 0;
   }
 }
