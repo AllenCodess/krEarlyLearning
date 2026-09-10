@@ -290,6 +290,35 @@
   margin-top: 1rem;
 }
 
+/* Program Page */
+
+.pre-program-section {
+  font-family: "Fira Sans", sans-serif;
+}
+
+.program-header {
+  text-align: center;
+}
+
+.programheader {
+  margin-bottom: 0.6rem;
+  font-size: 40px;
+}
+
+.subheaderone {
+  margin-bottom: 1rem;
+  font-size: 14px;
+  color: rgb(90, 90, 90);
+}
+
+.subheaderotwo {
+  width: 45%;
+  margin: 0 auto;
+  line-height: 25px;
+  font-size: 14px;
+  color: rgb(90, 90, 90);
+}
+
 /* Footer */
 .footer-container {
   display: flex;
