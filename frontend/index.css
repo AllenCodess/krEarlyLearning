@@ -326,14 +326,65 @@
 }
 
 .program-card {
-  border: 1px solid black;
   border-radius: 8px;
+  flex: 1;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .program-img {
   width: 100%;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  height: 329px;
+}
+
+.program-card-text-container {
+  padding: 1rem;
+}
+
+.program-card-list {
+  list-style: none;
+}
+
+.ages-program {
+  background-color: rgb(194, 240, 194);
+  width: fit-content;
+  padding: 0.2rem 0.7rem;
+  font-size: 12px;
+  border-radius: 10px;
+  color: rgb(0, 56, 0);
+  margin-bottom: 1rem;
+}
+
+.ages-program-pink {
+  background-color: rgb(250, 211, 234);
+  width: fit-content;
+  padding: 0.2rem 0.7rem;
+  font-size: 12px;
+  border-radius: 10px;
+  color: rgb(252, 35, 71);
+  margin-bottom: 1rem;
+}
+
+.program-card-header {
+  margin-bottom: 0.4rem;
+}
+
+.program-card-text {
+  color: gray;
+  font-size: 14px;
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+.program-list-items {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 0.2rem;
+}
+
+.program-check {
+  margin-right: 0.4rem;
 }
 
 /* Footer */
