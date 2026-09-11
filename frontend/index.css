@@ -441,6 +441,47 @@
   margin-bottom: 0.7rem;
 }
 
+/* Enrollment Process Section */
+
+.enrollment-text-container {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.e-header {
+}
+
+.enrollment-process-step {
+  display: flex;
+  align-items: center;
+  column-gap: 2px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 10px;
+  border-radius: 10px;
+  margin-top: 1rem;
+  padding: 0.6rem 0.2rem;
+  flex: 1;
+}
+
+.enrollment-process-steps-container {
+  display: flex;
+  column-gap: 20px;
+  margin-bottom: 2rem;
+}
+
+.step-desc {
+  font-size: 14px;
+  margin-top: 0.7rem;
+  color: gray;
+}
+
+.step-header {
+  margin-top: 0.5rem;
+}
+
+.e-text {
+  color: gray;
+}
+
 /* Mobile Response */
 
 @media (max-width: 768px) {
@@ -606,5 +647,13 @@
   .subheaderotwo {
     width: 80%;
     margin-bottom: 1rem;
+  }
+
+  .enrollment-process-steps-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
   }
 }

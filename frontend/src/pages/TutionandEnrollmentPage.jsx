@@ -1,5 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart, faCheckSquare } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHeart,
+  faCheckSquare,
+  faCalendar,
+  faFileLines,
+  faFolderOpen,
+} from "@fortawesome/free-solid-svg-icons";
 import { Footer } from "./../components/Footer";
 
 export const TuitionandEnrollment = () => {
@@ -93,7 +99,7 @@ export const TuitionandEnrollment = () => {
           <div className="program-card">
             <img
               className="program-img"
-              src="/public/images/infanttuition.png"
+              src="/public/images/enrollment.png"
               alt="Toddler Program picture"
             />
             <div className="program-card-text-container">
@@ -125,6 +131,55 @@ export const TuitionandEnrollment = () => {
                   Registration fee and deposit required
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+        <div className="enrollment-process-section">
+          <div className="enrollment-text-container">
+            <h1 className="e-header green">Enrollment Process</h1>
+            <p className="e-text">A simple step-by-step process to get started</p>
+          </div>
+          <div className="enrollment-process-steps-container">
+            <div className="enrollment-process-step">
+              <FontAwesomeIcon className="green fonticonwhy" icon={faCalendar} />
+              <div className="enrollment-process-step-text">
+                <p>Step 1</p>
+                <h4 className="green step-header">Schedule A Tour</h4>
+                <p className="step-desc">
+                  Visit our center, meet our team, and see our learning environment in person.
+                </p>
+              </div>
+            </div>
+            <div className="enrollment-process-step">
+              <FontAwesomeIcon className="green fonticonwhy" icon={faFileLines} />
+              <div className="enrollment-process-step-text">
+                <p>Step 2</p>
+                <h4 className="green step-header">Complete Enrollment Form</h4>
+                <p className="step-desc">
+                  Fill out our enrollment form with your family's information.
+                </p>
+              </div>
+            </div>
+            <div className="enrollment-process-step">
+              <FontAwesomeIcon className="green fonticonwhy" icon={faFolderOpen} />
+              <div className="enrollment-process-step-text">
+                <p>Step 3</p>
+                <h4 className="green step-header">Submit Required Forms</h4>
+                <p className="step-desc">
+                  Provide immunization records, emergency contacts, and any other required
+                  paprework.
+                </p>
+              </div>
+            </div>
+            <div className="enrollment-process-step">
+              <FontAwesomeIcon className="green fonticonwhy" icon={faHeart} />
+              <div className="enrollment-process-step-text">
+                <p>Step 4</p>
+                <h4 className="green step-header">Start Your Child's Journey</h4>
+                <p className="step-desc">
+                  Once everything is complete, your child is ready to join our KR family!
+                </p>
+              </div>
             </div>
           </div>
         </div>
