@@ -59,7 +59,7 @@ export const Footer = () => {
             </div>
             <div className="footer-location">
               <FontAwesomeIcon className="green" icon={faClock} />
-              <p>Mon - Fri 7:30AM - 5:30PM</p>
+              <p>Mon - Fri 6:30AM - 5:30PM</p>
             </div>
           </div>
         </div>
@@ -68,7 +68,13 @@ export const Footer = () => {
           <h2 className="footer-header">Stay Connected</h2>
           <ul className="footer-socials-list">
             <li className="social-list-item">
-              <FontAwesomeIcon icon={faInstagramSquare} />
+              <a
+                className="insta-link"
+                target="_blank"
+                href="https://www.instagram.com/krearlylearningacademy/"
+              >
+                <FontAwesomeIcon icon={faInstagramSquare} />
+              </a>
             </li>
             <li className="social-list-item">
               <FontAwesomeIcon icon={faFacebookSquare} />

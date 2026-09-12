@@ -15,7 +15,7 @@
 /* Navigation Bar */
 
 .kr-logo {
-  width: 100px;
+  width: 150px;
 }
 
 .navbar-container {
@@ -439,6 +439,10 @@
 
 .link-item {
   margin-bottom: 0.7rem;
+}
+
+.insta-link {
+  color: rgb(0, 94, 0);
 }
 
 /* Enrollment Process Section */

@@ -92,9 +92,9 @@ export const HomePage = () => {
             <div className="why-choose-grid-item">
               <FontAwesomeIcon className="green fonticonwhy" icon={faBook} />
 
-              <h4 className="item-heading">Daily infant Report Cards</h4>
+              <h4 className="item-heading">Daily Reports</h4>
               <p className="item-desc grey">
-                Parents of infants receive detailed daily reports on feeding and naps.
+                Parents will receive detailed daily reports on feeding and naps.
               </p>
             </div>
             <div className="why-choose-grid-item">
