@@ -448,9 +448,6 @@
   margin: 1rem 0;
 }
 
-.e-header {
-}
-
 .enrollment-process-step {
   display: flex;
   align-items: center;
@@ -480,6 +477,82 @@
 
 .e-text {
   color: gray;
+}
+
+/* Contact Form  */
+
+.contact-form-inputs {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.form-input {
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: 1px solid gray;
+  margin-bottom: 1rem;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.contact-container {
+  display: flex;
+  column-gap: 40px;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.contact-main-header {
+  margin: 1rem 0;
+}
+
+.contact-desc {
+  line-height: 25px;
+  color: rgb(87, 87, 87);
+  margin-bottom: 2rem;
+}
+
+.contact-left {
+  flex: 1;
+}
+
+.contact-right {
+  flex: 1;
+}
+
+.form-message {
+  height: 100px;
+  resize: none;
+  margin-bottom: 1rem;
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: 1px solid gray;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.form-container {
+  border: 14px solid rgb(202, 255, 202);
+  border-radius: 10px;
+  width: 70%;
+}
+
+.form-text {
+  font-size: 13px;
+  margin-top: 0.3rem;
+  color: gray;
+}
+
+.form-header {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.form-btn {
+  margin-bottom: 2rem;
+  width: 30%;
+  padding: 5px 0;
+  border-radius: 8px;
+  border: solid 2px gray;
 }
 
 /* Mobile Response */

@@ -6,8 +6,8 @@ export const Contact = () => {
     <>
       <div className="contact-container container">
         <div className="contact-left">
-          <h2 className="contact-subheader">Contact Us</h2>
-          <h1 className="contact-main-header">KR Early Learning Academy</h1>
+          <h2 className="contact-subheader green">Contact Us</h2>
+          <h1 className="contact-main-header green">KR Early Learning Academy</h1>
           <p className="contact-desc">
             We’d love to hear from you! Families can reach out with any questions, schedule a tour,
             ask about enrollment, or learn more about our programs. At KR Early Learning Academy,
@@ -32,9 +32,18 @@ export const Contact = () => {
         <div className="contact-right">
           <div className="form-container">
             <div className="form-header">
-              <h1 className="form-heading">Send Us A Message</h1>
+              <h1 className="form-heading green">Send Us A Message</h1>
               <p className="form-text">We'll get back to you as soon as possible!</p>
             </div>
+            <form className="contact-form-inputs">
+              <input className="form-input" type="text" placeholder="Name" />
+              <input className="form-input" type="text" placeholder="Email" />
+              <input className="form-input" type="text" placeholder="Phone" />
+              <textarea className="form-message" placeholder="Message"></textarea>
+              <button className="form-btn" type="submit">
+                Send
+              </button>
+            </form>
           </div>
         </div>
       </div>
