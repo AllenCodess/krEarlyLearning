@@ -42,6 +42,14 @@ export const NavBar = () => {
             <li className="navbar-list-items">
               <NavLink
                 className={({ isActive }) => (isActive ? "active-link" : "nav-links")}
+                to={"/contact"}
+              >
+                Contact
+              </NavLink>
+            </li>
+            <li className="navbar-list-items">
+              <NavLink
+                className={({ isActive }) => (isActive ? "active-link" : "nav-links")}
                 to={"/tuitionandenrollment"}
               >
                 Tuition & Enrollment
