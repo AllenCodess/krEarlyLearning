@@ -729,4 +729,22 @@
     margin: 0 auto;
     margin-bottom: 2rem;
   }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-left {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .contact-right {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .form-container {
+    margin: 0 auto;
+  }
 }
