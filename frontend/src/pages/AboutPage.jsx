@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faArrowRight, faBook, faUsers, faLeaf } from "@fortawesome/free-solid-svg-icons";
 import { Footer } from "../components/Footer";
+import { Link } from "react-router";
 export const AboutPage = () => {
   return (
     <>
@@ -13,9 +14,11 @@ export const AboutPage = () => {
             potential. Our mission is to provide a safe, nuturing, and enriching home based learning
             environment where children build the foundation for bright futures.
           </p>
-          <button className="hero-btn">
-            Schedule a Tour <FontAwesomeIcon className="hero-arrow" icon={faArrowRight} />
-          </button>
+          <Link to={"/contact"}>
+            <button className="hero-btn">
+              Schedule a Tour <FontAwesomeIcon className="hero-arrow" icon={faArrowRight} />
+            </button>
+          </Link>
           <ul className="hero-list">
             <li className="hero-list-item green">LEARN</li>
             <li className="hero-list-item pink">

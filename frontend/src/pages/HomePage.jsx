@@ -11,6 +11,7 @@ import {
   faLeaf,
   faClock,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router";
 
 export const HomePage = () => {
   return (
@@ -22,9 +23,12 @@ export const HomePage = () => {
             A safe, nurturing, and enriching home-based learning environment where children learn,
             grow, and thrive.
           </p>
-          <button className="hero-btn">
-            Schedule a Tour <FontAwesomeIcon className="hero-arrow" icon={faArrowRight} />
-          </button>
+          <Link to={"/contact"}>
+            <button className="hero-btn">
+              Schedule a Tour <FontAwesomeIcon className="hero-arrow" icon={faArrowRight} />
+            </button>
+          </Link>
+
           <ul className="hero-list">
             <li className="hero-list-item green">LEARN</li>
             <li className="hero-list-item pink">

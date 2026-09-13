@@ -121,6 +121,7 @@
   font-size: 20px;
   background-color: rgb(255, 116, 139);
   color: white;
+  cursor: pointer;
 }
 
 .hero-arrow {
