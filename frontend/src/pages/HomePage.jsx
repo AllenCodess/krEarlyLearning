@@ -19,7 +19,7 @@ export const HomePage = () => {
         <div className="hero-section-text-container">
           <h1 className="hero-header">Building Bright Minds & Strong Futures</h1>
           <p className="hero-text">
-            A safe, nuturing, and enriching home-based learning environment where children learn,
+            A safe, nurturing, and enriching home-based learning environment where children learn,
             grow, and thrive.
           </p>
           <button className="hero-btn">

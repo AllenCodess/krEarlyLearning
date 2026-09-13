@@ -17,7 +17,7 @@ export const TuitionandEnrollment = () => {
           <p className="subheaderone">Simple steps to join our nurturing learning community.</p>
           <p className="subheaderotwo">
             At KR Early Learning Academy, we offer quality care in a safe, loving, and enriching
-            environment where children learn, grow, and thrive. Contact our center todat for current
+            environment where children learn, grow, and thrive. Contact our center today for current
             tuition rates and availability.
           </p>
         </div>
@@ -30,9 +30,9 @@ export const TuitionandEnrollment = () => {
             />
             <div className="program-card-text-container">
               <p className="ages-program-pink">Infants & Toddlers</p>
-              <h3 className="program-card-header green">Tution Options </h3>
+              <h3 className="program-card-header green">Tuition Options </h3>
               <p className="program-card-text">
-                We offer flexible tuition options to meet th eneeds of your family. Our goal is to
+                We offer flexible tuition options to meet the needs of your family. Our goal is to
                 provide high-quality care that is accessible and supportive.
               </p>
               <ul className="program-card-list">

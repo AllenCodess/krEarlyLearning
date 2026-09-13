@@ -33,7 +33,7 @@ export const AboutPage = () => {
       <div className="why-choose-us-section container">
         <div className="why-choose-text-container">
           <h3 className="why-choose-sub-header green">OUR MISSION</h3>
-          <h2 className="why-choose-main-header">Nuturing Today for Brighter Tomorrows</h2>
+          <h2 className="why-choose-main-header">Nurturing Today for Brighter Tomorrows</h2>
           <p className="why-choose-description">
             To provide a safe, loving, and enriching home-based learning environment where children
             learn, grow, and thrive through play, exploration, and meaningful relationships.
@@ -51,7 +51,7 @@ export const AboutPage = () => {
             <div className="why-choose-grid-item">
               <FontAwesomeIcon className="green fonticonwhy" icon={faBook} />
 
-              <h4 className="item-heading">Early Learning Foucs</h4>
+              <h4 className="item-heading">Early Learning Focus</h4>
               <p className="item-desc grey">
                 Age-appropriate activities that build confidence, creativity, and a lifelong love of
                 learning.

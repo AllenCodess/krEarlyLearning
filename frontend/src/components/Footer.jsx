@@ -16,7 +16,7 @@ export const Footer = () => {
           <img className="kr-logo" src="/public/images/krlogo.png" alt="kr logo" />
           <h2 className="footer-header">Building Brighter Futures Together</h2>
           <p>
-            A safe, nuturing, and enriching home-based learning environment where children learn,
+            A safe, nurturing, and enriching home-based learning environment where children learn,
             grow, and thrive.
           </p>
           <ul className="hero-list">
