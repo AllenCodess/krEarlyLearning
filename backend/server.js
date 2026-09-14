@@ -1,11 +1,12 @@
-const express = require("express");
+import express from "express";
 const app = express();
+import userRoute from "./routes/userRoute.js";
 
 // accesses information from .env file
-const dotenv = require("dotenv");
+import dotenv from "dotenv";
 dotenv.config({ path: ".env" });
 
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 // reads information from .env file
 const DB = process.env.DATABASE;
 const port = process.env.PORT;
@@ -20,6 +21,8 @@ const connectDB = async () => {
 };
 
 connectDB();
+
+app.use("/api/v1/users", userRoute);
 
 app.get("/", (req, res) => {
   res.send("Hello from express");
