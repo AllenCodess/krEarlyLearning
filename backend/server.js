@@ -11,6 +11,11 @@ import mongoose from "mongoose";
 const DB = process.env.DATABASE;
 const port = process.env.PORT;
 
+// middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.set("json spaces", 2);
+
 const connectDB = async () => {
   try {
     await mongoose.connect(DB);
