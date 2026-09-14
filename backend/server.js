@@ -1,10 +1,12 @@
 const express = require("express");
 const app = express();
 
+// accesses information from .env file
 const dotenv = require("dotenv");
 dotenv.config({ path: ".env" });
 
 const mongoose = require("mongoose");
+// reads information from .env file
 const DB = process.env.DATABASE;
 const port = process.env.PORT;
 
