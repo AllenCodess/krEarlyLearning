@@ -25,6 +25,28 @@ export const signUp = async (req, res) => {
   }
 };
 
+export const login = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    if (!email || !password) {
+      return res.status(400).json({ status: "fail", message: "Provide an email or password." });
+    }
+
+    const user = await User.findOne({ email }).select("+password");
+
+    if (!user || !(await user.matchPassword(password))) {
+      return res.status(400).json({ status: "fail", message: "Invalid email or password" });
+    }
+
+    const token = signToken(user._id);
+
+    res.json({ _id: user._id, name: user.name, email: user.email, token });
+  } catch (error) {
+    res.status(400).json({ status: "fail", message: error.message });
+  }
+};
+
 export const findUsers = async (req, res) => {
   try {
     const users = await User.find();
