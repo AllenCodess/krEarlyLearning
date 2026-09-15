@@ -1,4 +1,5 @@
 import User from "../models/userModel.js";
+import jwt from "jsonwebtoken";
 
 export const createUser = async (req, res) => {
   try {
@@ -10,7 +11,11 @@ export const createUser = async (req, res) => {
       password,
       passwordConfirm,
     });
-    res.status(201).json({ status: "success", data: { user: newUser } });
+
+    const token = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET, {
+      expiresIn: process.env.JWT_EXPIRES_IN,
+    });
+    res.status(201).json({ status: "success", token, data: { user: newUser } });
   } catch (error) {
     res.status(400).json({ status: "failed", message: error.message });
   }
