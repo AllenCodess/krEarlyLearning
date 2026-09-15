@@ -1,6 +1,7 @@
 import express from "express";
 const app = express();
 import userRoute from "./routes/userRoute.js";
+import cookieParser from "cookie-parser";
 
 // accesses information from .env file
 import dotenv from "dotenv";
@@ -15,6 +16,7 @@ const port = process.env.PORT;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.set("json spaces", 2);
+app.use(cookieParser());
 
 const connectDB = async () => {
   try {

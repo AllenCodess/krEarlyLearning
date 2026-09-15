@@ -19,7 +19,17 @@ export const signUp = async (req, res) => {
     });
 
     const token = signToken(newUser._id);
-    res.status(201).json({ status: "success", token, data: { user: newUser } });
+
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "strict",
+      maxAge: 24 * 60 * 60 * 1000,
+    });
+
+    newUser.password = undefined;
+
+    res.status(201).json({ status: "success", data: { user: newUser } });
   } catch (error) {
     res.status(400).json({ status: "failed", message: error.message });
   }
@@ -41,10 +51,25 @@ export const login = async (req, res) => {
 
     const token = signToken(user._id);
 
-    res.json({ _id: user._id, name: user.name, email: user.email, token });
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "strict",
+      maxAge: 24 * 60 * 60 * 1000,
+    });
+
+    res.json({ _id: user._id, name: user.name, email: user.email });
   } catch (error) {
     res.status(400).json({ status: "fail", message: error.message });
   }
+};
+
+export const logout = async (req, res) => {
+  res.clearCookie("token", {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+  });
+  res.json({ status: "success", message: "Logged Out" });
 };
 
 export const findUsers = async (req, res) => {
