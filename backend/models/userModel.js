@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import bcrypt from "bcryptjs";
 import { type } from "node:os";
 
 const userSchema = new mongoose.Schema({
@@ -33,6 +34,16 @@ const userSchema = new mongoose.Schema({
       message: "Passwords do not match",
     },
   },
+});
+
+// Hash password before saving to DB
+userSchema.pre("save", async function () {
+  // Only run function if password is modified
+  if (!this.isModified("password")) return;
+  // hash the password with 10 salt
+  this.password = await bcrypt.hash(this.password, 10);
+  // Delete passwordConfirm field before it reaches DB
+  this.passwordConfirm = undefined;
 });
 
 const User = mongoose.model("User", userSchema);
