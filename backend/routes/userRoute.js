@@ -17,6 +17,6 @@ router.route("/login").post(login);
 router.route("/logout").get(logout);
 
 router.route("/").get(protect, admin, findUsers);
-router.route("/:id").delete(deleteUser).patch(updateUser).get(findUser);
+router.route("/:id").delete(admin, deleteUser).patch(admin, updateUser).get(admin, findUser);
 
 export default router;
