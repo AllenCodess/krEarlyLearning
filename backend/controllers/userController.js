@@ -1,24 +1,25 @@
 import User from "../models/userModel.js";
 import jwt from "jsonwebtoken";
 
-const signToken = (id) => {
-  return jwt.sign({ id }, process.env.JWT_SECRET, {
+const signToken = (id, role) => {
+  return jwt.sign({ id, role }, process.env.JWT_SECRET, {
     expiresIn: process.env.JWT_EXPIRES_IN,
   });
 };
 
 export const signUp = async (req, res) => {
   try {
-    const { name, email, password, passwordConfirm } = req.body;
+    const { name, email, password, passwordConfirm, role } = req.body;
 
     const newUser = await User.create({
       name,
       email,
       password,
       passwordConfirm,
+      role,
     });
 
-    const token = signToken(newUser._id);
+    const token = signToken(newUser._id, newUser.role);
 
     res.cookie("token", token, {
       httpOnly: true,
@@ -49,7 +50,7 @@ export const login = async (req, res) => {
       return res.status(400).json({ status: "fail", message: "Invalid email or password" });
     }
 
-    const token = signToken(user._id);
+    const token = signToken(user._id, user.role);
 
     res.cookie("token", token, {
       httpOnly: true,
@@ -58,7 +59,7 @@ export const login = async (req, res) => {
       maxAge: 24 * 60 * 60 * 1000,
     });
 
-    res.json({ _id: user._id, name: user.name, email: user.email });
+    res.json({ _id: user._id, name: user.name, email: user.email, role: user.role });
   } catch (error) {
     res.status(400).json({ status: "fail", message: error.message });
   }

@@ -10,6 +10,18 @@ export const protect = async (req, res, next) => {
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     req.user = decoded;
+    console.log(req.user.role);
+    next();
+  } catch (error) {
+    res.status(401).json({ status: "fail", message: error.message });
+  }
+};
+
+export const admin = async (req, res, next) => {
+  try {
+    if (req.user.role !== "admin") {
+      return res.status(401).json({ status: "fail", message: "You are not admin" });
+    }
     next();
   } catch (error) {
     res.status(401).json({ status: "fail", message: error.message });
