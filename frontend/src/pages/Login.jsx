@@ -7,6 +7,8 @@ export const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(email, password);
+
+    let userCredentials = { email, password };
   };
 
   return (
