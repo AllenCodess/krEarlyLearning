@@ -1,14 +1,30 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { loginSuccess } from "../slices/userSlice";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(email, password);
+  const dispatch = useDispatch();
+  // these are the keys from the initalState object
 
-    let userCredentials = { email, password };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await fetch("/api/v1/users/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await res.json();
+      console.log(data.name);
+      if (!res.ok) throw new Error(data.message || "Login failed");
+      dispatch(loginSuccess({ name: data.name }));
+    } catch (error) {
+      console.error(error.message);
+    }
   };
 
   return (
