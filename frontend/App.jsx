@@ -7,6 +7,7 @@ import { Contact } from "./src/pages/Contact";
 import { Login } from "./src/pages/Login";
 import { TuitionandEnrollment } from "./src/pages/TutionandEnrollmentPage";
 import { SignUp } from "./src/pages/SignUp";
+import { ParentPortal } from "./src/pages/ParentPortal";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
+        <Route path="/parentportal" element={<ParentPortal />}></Route>
         <Route path="/tuitionandenrollment" element={<TuitionandEnrollment />}></Route>
       </Routes>
     </>

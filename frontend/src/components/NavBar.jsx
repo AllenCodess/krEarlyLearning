@@ -56,7 +56,7 @@ export const NavBar = () => {
               </NavLink>
             </li>
             <li className="navbar-list-items">
-              <Link className="nav-links" to={"/"}>
+              <Link className="nav-links" to={"/parentportal"}>
                 Parent Portal
               </Link>
             </li>

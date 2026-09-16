@@ -610,6 +610,12 @@
   text-align: left;
 }
 
+/* Parent Portal */
+
+.parent-portal-container {
+  font-family: "Fira Sans", sans-serif;
+}
+
 /* Mobile Response */
 
 @media (max-width: 768px) {
