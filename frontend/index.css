@@ -560,6 +560,56 @@
   border: solid 2px gray;
 }
 
+/* Login Page */
+
+.login-container {
+  font-family: "Fira Sans", sans-serif;
+}
+
+.login-box {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.login-header {
+  margin-bottom: 1rem;
+}
+
+.login-text {
+  font-size: 13px;
+  color: rgb(71, 71, 71);
+  margin-bottom: 1rem;
+}
+
+.login-input {
+  margin-top: 0.3rem;
+  padding: 10px;
+  margin-bottom: 1rem;
+}
+
+.login-btn {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.login-redirect {
+  font-size: 12px;
+  margin-top: 1rem;
+  text-align: left;
+}
+
 /* Mobile Response */
 
 @media (max-width: 768px) {
