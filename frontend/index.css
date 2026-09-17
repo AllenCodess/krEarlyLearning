@@ -629,6 +629,25 @@
   font-family: "Fira Sans", sans-serif;
 }
 
+.parent-portal-content {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.pp-content-left {
+  border: 1px solid blue;
+  flex: 1;
+}
+
+.pp-content-right {
+  flex: 2;
+}
+
+.pp-btn {
+  padding: 10px;
+  font-family: "Fira Sans", sans-serif;
+}
+
 /* Mobile Response */
 
 @media (max-width: 768px) {
