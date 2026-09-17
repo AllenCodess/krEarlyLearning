@@ -635,17 +635,70 @@
 }
 
 .pp-content-left {
-  border: 1px solid blue;
   flex: 1;
 }
 
 .pp-content-right {
   flex: 2;
+  border: gray solid 1px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.pp-content-right-header {
+  margin-bottom: 1rem;
 }
 
 .pp-btn {
   padding: 10px;
   font-family: "Fira Sans", sans-serif;
+  margin-right: 0.2rem;
+}
+
+.parent-portal-dashboard-header {
+  margin-bottom: 0.5rem;
+}
+
+.pp-btn {
+  color: white;
+  background-color: rgb(162, 176, 255);
+  border: none;
+}
+
+/* Annoucements */
+.announcement-container {
+  background-color: rgb(222, 255, 222);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+}
+
+.announcement-heading {
+  padding-bottom: 1rem;
+}
+
+.announcement-info-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.announcement-subject {
+  margin-bottom: 0.6rem;
+}
+
+.announcement-date {
+  margin-bottom: 0.5rem;
+  color: gray;
+}
+
+.solid-line {
+  margin-bottom: 1rem;
+}
+
+.announcement-desc {
+  line-height: 25px;
+  width: 85%;
 }
 
 /* Mobile Response */
@@ -845,5 +898,20 @@
     width: 70%;
     margin: 0 auto;
     text-align: center;
+  }
+
+  .pp-content-left {
+    margin-bottom: 1rem;
+  }
+
+  .parent-portal-header {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .parent-portal-content {
+    flex-direction: column;
+    width: 90%;
+    margin: 1rem auto;
   }
 }

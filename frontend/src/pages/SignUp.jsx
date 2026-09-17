@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router";
+import { loginSuccess } from "../slices/userSlice";
 
 export const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -7,9 +10,26 @@ export const SignUp = () => {
   const [passwordConfirm, setPasswordConfirm] = useState("");
   const [name, setName] = useState("");
 
-  const handleSubmit = (e) => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(name, email, password, passwordConfirm);
+    try {
+      const res = await fetch("/api/v1/users/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, password, passwordConfirm }),
+      });
+
+      const data = await res.json();
+      console.log(data.data.user);
+      if (!res.ok) throw new Error(data.message || "Login failed");
+      dispatch(loginSuccess({ name: data.data.user.name }));
+      navigate("/parentportal");
+    } catch (error) {
+      console.error(error.message);
+    }
   };
 
   return (
