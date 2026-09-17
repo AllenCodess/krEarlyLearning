@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router";
 
 export const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -51,7 +52,12 @@ export const SignUp = () => {
               placeholder="Renter Password"
             />
             <button className="login-btn"> Create Account</button>
-            <p className="login-redirect">Already have an account? Login </p>
+            <p className="login-redirect">
+              Already have an account?{" "}
+              <Link className="signup-link" to={"/login"}>
+                Login Here
+              </Link>
+            </p>
           </form>
         </div>
       </div>

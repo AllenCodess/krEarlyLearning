@@ -67,7 +67,7 @@ export const NavBar = () => {
             </li>
             {isAuthenticated && (
               <li className="navbar-list-items">
-                <button onClick={() => dispatch(logoutSuccess())} className="nav-links">
+                <button onClick={() => dispatch(logoutSuccess())} className=" logout-btn">
                   Logout
                 </button>
               </li>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { loginSuccess } from "../slices/userSlice";
 import { useNavigate } from "react-router";
+import { Link } from "react-router";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -54,7 +55,12 @@ export const Login = () => {
               placeholder="Enter Password"
             />
             <button className="login-btn"> Login</button>
-            <p className="login-redirect">Dont have an account? Create One</p>
+            <p className="login-redirect">
+              Dont have an account?{" "}
+              <Link className="signup-link" to={"/signup"}>
+                Create One
+              </Link>
+            </p>
           </form>
         </div>
       </div>
