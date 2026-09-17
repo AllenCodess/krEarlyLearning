@@ -1,9 +1,13 @@
 import Hamburger from "hamburger-react";
 import { Link, NavLink } from "react-router";
 import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { logoutSuccess } from "../slices/userSlice";
 
 export const NavBar = () => {
   const [isOpen, setOpen] = useState(false);
+  const dispatch = useDispatch();
+  const { user, isAuthenticated } = useSelector((state) => state.user);
   return (
     <>
       <div className="navbar-container container ">
@@ -14,6 +18,7 @@ export const NavBar = () => {
           <div className="hamburger-menu">
             <Hamburger toggled={isOpen} toggle={setOpen} />
           </div>
+
           <ul className={`navbar-list ${isOpen ? "open" : ""}`}>
             <li className="navbar-list-items">
               <NavLink
@@ -60,6 +65,13 @@ export const NavBar = () => {
                 Parent Portal
               </Link>
             </li>
+            {isAuthenticated && (
+              <li className="navbar-list-items">
+                <button onClick={() => dispatch(logoutSuccess())} className="nav-links">
+                  Logout
+                </button>
+              </li>
+            )}
           </ul>
         </div>
       </div>

@@ -8,6 +8,7 @@ import { Login } from "./src/pages/Login";
 import { TuitionandEnrollment } from "./src/pages/TutionandEnrollmentPage";
 import { SignUp } from "./src/pages/SignUp";
 import { ParentPortal } from "./src/pages/ParentPortal";
+import ProtectedRoute from "./src/components/ProtectedRoute";
 
 function App() {
   return (
@@ -20,8 +21,10 @@ function App() {
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
-        <Route path="/parentportal" element={<ParentPortal />}></Route>
         <Route path="/tuitionandenrollment" element={<TuitionandEnrollment />}></Route>
+        <Route element={<ProtectedRoute />}>
+          <Route path="/parentportal" element={<ParentPortal />}></Route>
+        </Route>
       </Routes>
     </>
   );

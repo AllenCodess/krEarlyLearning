@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { loginSuccess } from "../slices/userSlice";
+import { useNavigate } from "react-router";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   // these are the keys from the initalState object
 
   const handleSubmit = async (e) => {
@@ -19,9 +21,10 @@ export const Login = () => {
       });
 
       const data = await res.json();
-      console.log(data.name);
+      console.log(data);
       if (!res.ok) throw new Error(data.message || "Login failed");
       dispatch(loginSuccess({ name: data.name }));
+      navigate("/parentportal");
     } catch (error) {
       console.error(error.message);
     }
