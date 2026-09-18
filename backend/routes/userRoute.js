@@ -1,5 +1,5 @@
 import express from "express";
-import { admin, protect } from "../middleware/authMiddleware.js";
+import { admin, protect, getMe } from "../middleware/authMiddleware.js";
 
 import {
   signUp,
@@ -15,6 +15,7 @@ const router = express.Router();
 router.route("/signup").post(signUp);
 router.route("/login").post(login);
 router.route("/logout").get(logout);
+router.get("/me", protect, getMe);
 
 router.route("/").get(protect, admin, findUsers);
 router.route("/:id").delete(admin, deleteUser).patch(admin, updateUser).get(admin, findUser);

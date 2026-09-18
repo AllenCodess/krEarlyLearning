@@ -12,7 +12,7 @@ const postSlice = createSlice({
   initialState,
   reducers: {
     postsResults: (state, action) => {
-      state.title = action.payload.title;
+      return action.payload;
     },
   },
 });

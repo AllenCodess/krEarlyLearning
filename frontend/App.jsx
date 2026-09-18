@@ -8,9 +8,33 @@ import { Login } from "./src/pages/Login";
 import { TuitionandEnrollment } from "./src/pages/TutionandEnrollmentPage";
 import { SignUp } from "./src/pages/SignUp";
 import { ParentPortal } from "./src/pages/ParentPortal";
+import { useDispatch } from "react-redux";
+import { useState, useEffect } from "react";
+import { loginSuccess } from "./src/slices/userSlice";
 import ProtectedRoute from "./src/components/ProtectedRoute";
 
 function App() {
+  const dispatch = useDispatch();
+  const [checking, setChecking] = useState(true);
+
+  useEffect(() => {
+    const restore = async () => {
+      try {
+        const res = await fetch("/api/v1/users/me");
+        if (res.ok) {
+          const user = await res.json();
+          dispatch(loginSuccess({ name: user.name }));
+        }
+      } catch (err) {
+        console.error(err.message);
+      } finally {
+        setChecking(false);
+      }
+    };
+    restore();
+  }, [dispatch]);
+
+  if (checking) return <p>Loading...</p>;
   return (
     <>
       <NavBar />

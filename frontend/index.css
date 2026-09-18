@@ -124,7 +124,7 @@
   margin-top: 2rem;
   width: 40%;
   border-radius: 20px;
-  border: none;
+  border: 3px white solid;
   padding: 10px;
   font-family: "Fira Sans", sans-serif;
   font-size: 20px;
@@ -700,6 +700,10 @@
 .announcement-desc {
   line-height: 25px;
   width: 85%;
+}
+
+.no-posts {
+  margin-top: 1rem;
 }
 
 /* Mobile Response */
