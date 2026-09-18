@@ -1,7 +1,11 @@
 import { Announcements } from "../components/Announcements";
+import { Documents } from "../components/Documents";
+import { useState } from "react";
 import { useSelector } from "react-redux";
 
 export const ParentPortal = () => {
+  const [annoucement, setAnnouncement] = useState(false);
+  const [document, setDocument] = useState(false);
   const { name } = useSelector((state) => state.user);
 
   return (
@@ -25,10 +29,15 @@ export const ParentPortal = () => {
               <p>Here's what's new at KR Early Learning.</p>
             </div>
             <div className="pp-content-right-btn">
-              <button className="pp-btn">Announcements</button>
-              <button className="pp-btn">Documents</button>
+              <button className="pp-btn" onClick={() => setAnnouncement(!annoucement)}>
+                Announcements
+              </button>
+              <button className="pp-btn" onClick={() => setDocument(!document)}>
+                Documents
+              </button>
             </div>
-            <Announcements />
+            {annoucement && <Announcements />}
+            {document && <Documents />}
           </div>
         </div>
       </div>

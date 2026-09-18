@@ -663,6 +663,7 @@
   color: white;
   background-color: rgb(162, 176, 255);
   border: none;
+  cursor: pointer;
 }
 
 /* Annoucements */
@@ -704,6 +705,11 @@
 
 .no-posts {
   margin-top: 1rem;
+}
+
+.doc-text {
+  margin-top: 1rem;
+  font-weight: 700;
 }
 
 /* Mobile Response */
