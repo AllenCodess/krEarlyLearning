@@ -1,17 +1,39 @@
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { postsResults } from "../slices/postSlice";
+
 export const Announcements = () => {
+  const [data, setData] = useState(null);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch("/api/v1/announcements");
+        const json = await res.json();
+        if (!res.ok) {
+          throw new Error(json.message || "Fetching Data failed");
+        }
+        setData(json.data[0]);
+        dispatch(postsResults(json.data[0]));
+        console.log(json.data[0]);
+      } catch (error) {
+        console.error(error.message);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <>
       <div className="announcement-container">
         <h1 className="announcement-heading">Announcements</h1>
         <div className="announcement-info-container">
-          <h2 className="announcement-subject">School Closed Monday</h2>
-          <p className="announcement-date">September 14, 2026</p>
+          <h2 className="announcement-subject">{data?.title}</h2>
+          <p className="announcement-date">{data?.date}</p>
           <hr className="solid-line" />
-          <p className="announcement-desc">
-            KR Early Learning will be closed on Monday, September 14 for staff development day. We
-            will reopen on tuesday at our normal hours. If you have any questions please contact the
-            office.
-          </p>
+          <p className="announcement-desc">{data?.description}</p>
         </div>
       </div>
     </>
