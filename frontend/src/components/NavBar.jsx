@@ -7,7 +7,7 @@ import { logoutSuccess } from "../slices/userSlice";
 export const NavBar = () => {
   const [isOpen, setOpen] = useState(false);
   const dispatch = useDispatch();
-  const { user, isAuthenticated } = useSelector((state) => state.user);
+  const { role, isAuthenticated } = useSelector((state) => state.user);
   return (
     <>
       <div className="navbar-container container ">
@@ -70,6 +70,13 @@ export const NavBar = () => {
                 <button onClick={() => dispatch(logoutSuccess())} className=" logout-btn">
                   Logout
                 </button>
+              </li>
+            )}
+            {role === "admin" && (
+              <li className="navbar-list-items">
+                <Link className="nav-links" to={"/admin"}>
+                  Admin
+                </Link>
               </li>
             )}
           </ul>
