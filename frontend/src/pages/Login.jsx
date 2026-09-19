@@ -25,7 +25,8 @@ export const Login = () => {
       const data = await res.json();
 
       if (!res.ok) throw new Error(data.message || "Login failed");
-      dispatch(loginSuccess({ name: data.name }));
+      dispatch(loginSuccess({ name: data.name, role: data.role }));
+      console.log(data);
       navigate("/parentportal");
     } catch (error) {
       console.error(error.message);
