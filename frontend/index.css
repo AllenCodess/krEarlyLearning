@@ -666,6 +666,42 @@
   cursor: pointer;
 }
 
+/* Admin Portal */
+
+.admin-post {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.admin-btn {
+  width: 25%;
+  margin-top: 2rem;
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.admin-input {
+  margin-bottom: 1rem;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+.admin-label {
+  font-weight: 600;
+}
+
+.admin-message {
+  resize: none;
+  height: 100px;
+}
+
 /* Annoucements */
 .announcement-container {
   background-color: rgb(222, 255, 222);

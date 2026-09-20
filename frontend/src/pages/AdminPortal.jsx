@@ -22,6 +22,19 @@ const AdminPortal = () => {
             <div className="pp-content-right-header">
               <h1>Edit Announcement</h1>
             </div>
+            <div className="announcement-container">
+              <form className="admin-post">
+                <label className="admin-label">Title</label>
+                <input className="admin-input" type="text" />
+                <label className="admin-label">Subject</label>
+                <input className="admin-input" type="text" />
+                <label className="admin-label">Date</label>
+                <input className="admin-input" type="text" />
+                <label className="admin-label">Message</label>
+                <textarea className="admin-message" name="" id=""></textarea>
+                <button className="admin-btn">Update Announcement</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
