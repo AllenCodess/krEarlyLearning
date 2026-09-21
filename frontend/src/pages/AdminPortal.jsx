@@ -1,17 +1,42 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { postsResults } from "../slices/postSlice";
 
 const AdminPortal = () => {
   const [title, setTtile] = useState("");
   const [subject, setSubject] = useState("");
   const [date, setDate] = useState("");
-  const [message, setMessage] = useState("");
+  const [description, setDescription] = useState("");
+
+  const { name } = useSelector((state) => state.user);
 
   const dispatch = useDispatch();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(title, subject, date, message);
+
+    try {
+      const res = await fetch("/api/v1/announcements/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({ title, subject, date, description }),
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message || "Posts failed to send");
+      dispatch(
+        postsResults({
+          title: data.title,
+          subject: data.subject,
+          date: data.date,
+          description: data.description,
+        }),
+      );
+      console.log(data);
+    } catch (error) {
+      console.error(error.message);
+    }
   };
 
   return (
@@ -49,10 +74,10 @@ const AdminPortal = () => {
                   onChange={(e) => setDate(e.target.value)}
                   type="text"
                 />
-                <label className="admin-label">Message</label>
+                <label className="admin-label">Description</label>
                 <textarea
                   className="admin-message"
-                  onChange={(e) => setMessage(e.target.value)}
+                  onChange={(e) => setDescription(e.target.value)}
                 ></textarea>
                 <button className="admin-btn">Update Announcement</button>
               </form>

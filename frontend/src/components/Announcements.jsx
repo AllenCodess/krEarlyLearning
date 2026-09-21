@@ -26,7 +26,7 @@ export const Announcements = () => {
 
   return (
     <>
-      {!post ? (
+      {post.title === null ? (
         <p className="no-posts">There are no announcements at this time.</p>
       ) : (
         <div className="announcement-container">

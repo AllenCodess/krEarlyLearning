@@ -4,7 +4,7 @@ const initialState = {
   title: null,
   subject: null,
   date: null,
-  message: null,
+  description: null,
 };
 
 const postSlice = createSlice({
@@ -15,7 +15,7 @@ const postSlice = createSlice({
       state.title = action.payload.title;
       state.subject = action.payload.subject;
       state.date = action.payload.date;
-      state.message = action.payload.message;
+      state.description = action.payload.description;
     },
   },
 });

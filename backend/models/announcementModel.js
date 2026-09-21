@@ -15,6 +15,7 @@ const announcementSchema = new mongoose.Schema({
     type: String,
     required: [true, "A announcement must have a description."],
   },
+  timeStamps: true,
 });
 
 const Posts = mongoose.model("posts", announcementSchema);
