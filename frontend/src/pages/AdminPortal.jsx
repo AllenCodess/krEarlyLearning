@@ -1,12 +1,19 @@
-import { Announcements } from "../components/Announcements";
-import { Documents } from "../components/Documents";
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const AdminPortal = () => {
-  const [annoucement, setAnnouncement] = useState(false);
+  const [title, setTtile] = useState("");
+  const [subject, setSubject] = useState("");
+  const [date, setDate] = useState("");
+  const [message, setMessage] = useState("");
 
-  const { name } = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(title, subject, date, message);
+  };
+
   return (
     <>
       <div className="parent-portal-container container">
@@ -23,15 +30,30 @@ const AdminPortal = () => {
               <h1>Edit Announcement</h1>
             </div>
             <div className="announcement-container">
-              <form className="admin-post">
+              <form onSubmit={handleSubmit} className="admin-post">
                 <label className="admin-label">Title</label>
-                <input className="admin-input" type="text" />
+                <input
+                  className="admin-input"
+                  type="text"
+                  onChange={(e) => setTtile(e.target.value)}
+                />
                 <label className="admin-label">Subject</label>
-                <input className="admin-input" type="text" />
+                <input
+                  className="admin-input"
+                  onChange={(e) => setSubject(e.target.value)}
+                  type="text"
+                />
                 <label className="admin-label">Date</label>
-                <input className="admin-input" type="text" />
+                <input
+                  className="admin-input "
+                  onChange={(e) => setDate(e.target.value)}
+                  type="text"
+                />
                 <label className="admin-label">Message</label>
-                <textarea className="admin-message" name="" id=""></textarea>
+                <textarea
+                  className="admin-message"
+                  onChange={(e) => setMessage(e.target.value)}
+                ></textarea>
                 <button className="admin-btn">Update Announcement</button>
               </form>
             </div>

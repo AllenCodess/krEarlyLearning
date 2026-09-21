@@ -691,15 +691,21 @@
   padding: 8px;
   border-radius: 10px;
   border: 1px solid gray;
+  font-family: "Fira Sans", sans-serif;
 }
 
 .admin-label {
   font-weight: 600;
+  margin-bottom: 0.2rem;
 }
 
 .admin-message {
   resize: none;
   height: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  font-family: "Fira Sans", sans-serif;
 }
 
 /* Annoucements */
