@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { postsResults } from "../slices/postSlice";
 
 const AdminPortal = () => {
-  const [title, setTtile] = useState("");
+  const [title, setTitle] = useState("");
   const [subject, setSubject] = useState("");
   const [date, setDate] = useState("");
   const [description, setDescription] = useState("");
@@ -33,6 +33,10 @@ const AdminPortal = () => {
           description: data.description,
         }),
       );
+      setTitle("");
+      setSubject("");
+      setDate("");
+      setDescription("");
       console.log(data);
     } catch (error) {
       console.error(error.message);
@@ -60,24 +64,28 @@ const AdminPortal = () => {
                 <input
                   className="admin-input"
                   type="text"
-                  onChange={(e) => setTtile(e.target.value)}
+                  onChange={(e) => setTitle(e.target.value)}
+                  value={title}
                 />
                 <label className="admin-label">Subject</label>
                 <input
                   className="admin-input"
                   onChange={(e) => setSubject(e.target.value)}
                   type="text"
+                  value={subject}
                 />
                 <label className="admin-label">Date</label>
                 <input
                   className="admin-input "
                   onChange={(e) => setDate(e.target.value)}
                   type="text"
+                  value={date}
                 />
                 <label className="admin-label">Description</label>
                 <textarea
                   className="admin-message"
                   onChange={(e) => setDescription(e.target.value)}
+                  value={description}
                 ></textarea>
                 <button className="admin-btn">Update Announcement</button>
               </form>

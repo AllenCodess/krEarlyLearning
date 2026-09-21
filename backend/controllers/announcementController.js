@@ -19,7 +19,7 @@ export const createPost = async (req, res) => {
 
 export const viewPost = async (req, res) => {
   try {
-    const posts = (await Posts.find()).toSorted({ created: -1 });
+    const posts = await Posts.find().sort({ createdAt: -1 });
     res.status(200).json({ status: "success", data: posts });
   } catch (error) {
     res.status(400).json({ status: "failed", message: error.message });

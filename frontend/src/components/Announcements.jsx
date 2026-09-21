@@ -9,8 +9,9 @@ export const Announcements = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("/api/v1/announcements");
+        const res = await fetch("/api/v1/announcements/");
         const json = await res.json();
+        console.log(json);
         if (!res.ok) {
           throw new Error(json.message || "Fetching Data failed");
         }
@@ -35,6 +36,7 @@ export const Announcements = () => {
             <h2 className="announcement-subject">{post?.title}</h2>
             <p className="announcement-date">{post?.date}</p>
             <hr className="solid-line" />
+            <p className="announcement-subject">subject: {post?.subject}</p>
             <p className="announcement-desc">{post?.description}</p>
           </div>
         </div>
