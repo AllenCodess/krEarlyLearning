@@ -754,6 +754,21 @@
   font-weight: 700;
 }
 
+/* Documents */
+
+.docs-header {
+  margin-top: 2rem;
+}
+
+.docs {
+  margin-top: 1rem;
+  list-style: none;
+}
+
+.docs-link {
+  text-decoration: none;
+}
+
 /* Mobile Response */
 
 @media (max-width: 768px) {

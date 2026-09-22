@@ -4,9 +4,8 @@ import cloudinary from "../cloudinaryConfig.js";
 const uploadPDF = (buffer) =>
   new Promise((resolve, reject) => {
     cloudinary.uploader
-      .upload_stream(
-        { folder: "documents", resource_type: "raw" }, // "raw" = non-image file
-        (err, result) => (err ? reject(err) : resolve(result)),
+      .upload_stream({ folder: "documents", resource_type: "image" }, (err, result) =>
+        err ? reject(err) : resolve(result),
       )
       .end(buffer);
   });
