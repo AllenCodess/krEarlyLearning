@@ -769,6 +769,10 @@
   text-decoration: none;
 }
 
+.upload-doc-header {
+  margin-top: 1rem;
+}
+
 /* Mobile Response */
 
 @media (max-width: 768px) {

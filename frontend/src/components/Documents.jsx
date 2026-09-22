@@ -7,7 +7,7 @@ export const Documents = () => {
       try {
         const res = await fetch("/api/v1/documents");
         const json = await res.json();
-        console.log(json);
+
         setDocs(json.data);
         if (!res.ok) {
           throw new Error(json.message || "Fetching File failed");
@@ -28,7 +28,7 @@ export const Documents = () => {
         <ul>
           {docs.map((doc) => (
             <li className="docs" key={doc._id}>
-              <a className="docs-link" href={doc.fileUrl} target="_blank" rel="noopener noreferrer">
+              <a className="docs-link" href={doc.fileUrl} target="_blank">
                 {doc.name}
               </a>
             </li>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { postsResults } from "../slices/postSlice";
+import DocumentUpload from "../components/DocumentUpload";
 
 const AdminPortal = () => {
   const [title, setTitle] = useState("");
@@ -89,6 +90,12 @@ const AdminPortal = () => {
                 ></textarea>
                 <button className="admin-btn">Update Announcement</button>
               </form>
+            </div>
+            <div className="pp-content-right-header">
+              <h1 className="upload-doc-header">Upload Document</h1>
+            </div>
+            <div className="announcement-container">
+              <DocumentUpload />
             </div>
           </div>
         </div>
