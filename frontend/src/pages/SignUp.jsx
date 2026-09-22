@@ -9,6 +9,7 @@ export const SignUp = () => {
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
   const [name, setName] = useState("");
+  const [error, setError] = useState(false);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -29,6 +30,7 @@ export const SignUp = () => {
       navigate("/parentportal");
     } catch (error) {
       console.error(error.message);
+      setError(error.message);
     }
   };
 
@@ -39,6 +41,7 @@ export const SignUp = () => {
           <h1 className="login-header">Create your account</h1>
           <p className="login-text">Welcome! Please enter your details to continue.</p>
           <form onSubmit={handleSubmit} className="login-form">
+            {error && <div className="error">{error}</div>}
             <label>Name</label>
             <input
               value={name}

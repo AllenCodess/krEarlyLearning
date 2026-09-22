@@ -7,6 +7,7 @@ import { Link } from "react-router";
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(false);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -30,6 +31,7 @@ export const Login = () => {
       navigate("/parentportal");
     } catch (error) {
       console.error(error.message);
+      setError(error.message);
     }
   };
 
@@ -40,6 +42,7 @@ export const Login = () => {
           <h1 className="login-header">Log into your account</h1>
           <p className="login-text">Welcome back! Please enter your details to continue.</p>
           <form onSubmit={handleSubmit} className="login-form">
+            {error && <div className="error">{error}</div>}
             <label>Email address</label>
             <input
               value={email}

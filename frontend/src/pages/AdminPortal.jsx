@@ -8,6 +8,7 @@ const AdminPortal = () => {
   const [subject, setSubject] = useState("");
   const [date, setDate] = useState("");
   const [description, setDescription] = useState("");
+  const [error, setError] = useState(false);
 
   const { name } = useSelector((state) => state.user);
 
@@ -41,6 +42,7 @@ const AdminPortal = () => {
       console.log(data);
     } catch (error) {
       console.error(error.message);
+      setError(error.message);
     }
   };
 
@@ -61,6 +63,7 @@ const AdminPortal = () => {
             </div>
             <div className="announcement-container">
               <form onSubmit={handleSubmit} className="admin-post">
+                {error && <div className="error">{error}</div>}
                 <label className="admin-label">Title</label>
                 <input
                   className="admin-input"

@@ -3,10 +3,14 @@ import { useState } from "react";
 export const DocumentUpload = () => {
   const [name, setName] = useState("");
   const [file, setFile] = useState(null);
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!file) return;
+    if (!name || !file) {
+      setError("Please add a name and choose a file.");
+      return;
+    }
 
     const formData = new FormData();
     formData.append("name", name);
@@ -31,6 +35,7 @@ export const DocumentUpload = () => {
 
   return (
     <form onSubmit={handleSubmit} className="admin-post">
+      {error && <div className="error">{error}</div>}
       <label className="admin-label">Document Name</label>
       <input
         className="admin-input"

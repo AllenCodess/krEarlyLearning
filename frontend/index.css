@@ -773,6 +773,13 @@
   margin-top: 1rem;
 }
 
+/* Errors */
+
+.error {
+  color: red;
+  margin: 1rem 0;
+}
+
 /* Mobile Response */
 
 @media (max-width: 768px) {
