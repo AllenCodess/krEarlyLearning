@@ -13,7 +13,7 @@ export const Footer = () => {
     <>
       <div className="footer-container container">
         <div className="footerone">
-          <img className="kr-logo" src="/public/images/krlogo.png" alt="kr logo" />
+          <img className="kr-logo" src="/images/krlogo.png" alt="kr logo" />
           <h2 className="footer-header">Building Brighter Futures Together</h2>
           <p>
             A safe, nurturing, and enriching home-based learning environment where children learn,

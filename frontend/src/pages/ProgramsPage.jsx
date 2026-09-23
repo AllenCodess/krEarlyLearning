@@ -17,11 +17,7 @@ export const ProgramPage = () => {
         </div>
         <div className="program-cards-section">
           <div className="program-card">
-            <img
-              className="program-img"
-              src="/public/images/infants.png"
-              alt="Toddler Program picture"
-            />
+            <img className="program-img" src="/images/infants.png" alt="Toddler Program picture" />
             <div className="program-card-text-container">
               <p className="ages-program-pink">AGES 0-18 MONTHS</p>
               <h3 className="program-card-header green">Infant & Young Toddler Room</h3>
@@ -54,11 +50,7 @@ export const ProgramPage = () => {
             </div>
           </div>
           <div className="program-card">
-            <img
-              className="program-img"
-              src="/public/images/toddler.png"
-              alt="Toddler Program picture"
-            />
+            <img className="program-img" src="/images/toddler.png" alt="Toddler Program picture" />
             <div className="program-card-text-container">
               <p className="ages-program">AGES 18 MONTHS-5 YEARS</p>
               <h3 className="program-card-header green">Toddler & Preschool Room</h3>

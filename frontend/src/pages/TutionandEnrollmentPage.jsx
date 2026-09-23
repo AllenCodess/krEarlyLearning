@@ -25,7 +25,7 @@ export const TuitionandEnrollment = () => {
           <div className="program-card">
             <img
               className="program-img"
-              src="/public/images/infanttuition.png"
+              src="/images/infanttuition.png"
               alt="Toddler Program picture"
             />
             <div className="program-card-text-container">
@@ -62,7 +62,7 @@ export const TuitionandEnrollment = () => {
           <div className="program-card">
             <img
               className="program-img"
-              src="/public/images/tuitioninclude.png"
+              src="/images/tuitioninclude.png"
               alt="Toddler Program picture"
             />
             <div className="program-card-text-container">
@@ -99,7 +99,7 @@ export const TuitionandEnrollment = () => {
           <div className="program-card">
             <img
               className="program-img"
-              src="/public/images/enrollment.png"
+              src="/images/enrollment.png"
               alt="Toddler Program picture"
             />
             <div className="program-card-text-container">

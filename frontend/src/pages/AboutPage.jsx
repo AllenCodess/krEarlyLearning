@@ -102,7 +102,7 @@ export const AboutPage = () => {
       </div>
       <div className="our-story-section container">
         <div className="our-story-flex">
-          <img src="/public/images/ourstory.png" className="our-story-img" alt="Our Story Image" />
+          <img src="/images/ourstory.png" className="our-story-img" alt="Our Story Image" />
           <div className="our-story-text-container">
             <h3 className="subheaderabout green">OUR STORY</h3>
             <h2 className="mainheaderabout green">A Passion for Children, A Brighter Community</h2>
