@@ -1,16 +1,41 @@
-# React + Vite
+# KR Early Learning
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Status:** In development
 
-Currently, two official plugins are available:
+[Website](https://krearlylearning.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Screenshot
 
-## React Compiler
+![Screenshot](frontend/public/github.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Overview
 
-## Expanding the ESLint configuration
+A full-stack MERN application for a daycare, featuring a parent portal and an admin portal. Admins log in to post announcements and upload documents (such as menus and forms), while parents view announcements and download the documents shared with them. Access is role-based: routes are protected on both client and server, and admin-only actions verify the user's role before creating or deleting data. File uploads are handled with Multer and stored on Cloudinary, with only the file URL saved to the database. Built with JWT authentication over HTTP-only cookies, Redux Toolkit for global state, and a custom CSS design system.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+- User registration and login with JWT authentication (HTTP-only cookies)
+- Session persistence across page refreshes
+- Role-based access control (admin vs. parent)
+- Admin portal to create announcements and upload documents
+- Parent portal to view announcements and download documents
+- PDF/document uploads to Cloudinary via Multer
+- Create, view, and delete documents
+- Protected routes on both client and server
+- Form validation with user-facing error messages
+- Empty states when no announcements or documents exist
+- Responsive design for mobile and desktop
+
+## Technologies Used
+
+- React
+- React Router
+- Redux Toolkit
+- Node.js / Express
+- MongoDB / Mongoose
+- JWT authentication
+- bcrypt (password hashing)
+- Multer (file handling)
+- Cloudinary (file storage)
+- CSS
+- Vite
