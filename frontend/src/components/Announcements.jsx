@@ -36,7 +36,7 @@ export const Announcements = () => {
             <h2 className="announcement-subject">{post?.title}</h2>
             <p className="announcement-date">{post?.date}</p>
             <hr className="solid-line" />
-            <p className="announcement-subject">subject:{post?.subject}</p>
+            <p className="announcement-subject">{post?.subject}</p>
             <p className="announcement-desc">{post?.description}</p>
           </div>
         </div>

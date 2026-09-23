@@ -729,6 +729,7 @@
 .announcement-subject {
   margin-bottom: 0.6rem;
   color: black;
+  font-weight: 600;
 }
 
 .announcement-date {
